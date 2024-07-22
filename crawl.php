@@ -162,7 +162,7 @@
                                 
                                         $html = file_get_html('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=' . $query_replace . '&btnG=');
                                         echo '<div class="card bg-light shadow mb-5 p-4" style="border-radius: 1rem;">';
-                                        foreach ($html->find('div[class="gs_ri]') as $news) {
+                                        foreach ($html->find('div[class="gs_ri"]') as $news) {
                                 
                                             $continue = false;
                                             foreach ($news->find('div[class="gs_a"]') as $docAbstractLink) {
@@ -212,7 +212,7 @@
                                             }
                                             echo "<br>";
                                             //Mendapatkan Number of Citation
-                                            foreach ($news->find('div[class="gs_fl gs_flb]') as $cite) {
+                                            foreach ($news->find('div[class="gs_fl gs_flb"]') as $cite) {
                                                 $cited = $cite->find('a', 2)->plaintext;
                                                 $citedExplode = explode(' ', $cited);
                                                 $count = count($citedExplode);
