@@ -179,6 +179,7 @@
                                                 continue;
                                             }
                                 
+                                            $docSourceLink = $news->find('a', 0)->href;
                                             $docTitle = $news->find('a', 0)->plaintext;
                                             echo "<h3 class='mb-3'>" . $docTitle . "</h3>";
                                 
@@ -224,10 +225,10 @@
 
                                             //Masukin ke database yg abstractnya tidak kosong
                                             if($abstract != ""){
-                                                $sql = "insert into contents(title,number_citations,authors,abstract,similarity) values(?,?,?,?,?)";
+                                                $sql = "insert into contents(title,number_citations,authors,abstract,similarity,link) values(?,?,?,?,?,?)";
                                                 $result = $con->prepare($sql);
                                                 $bobot =0;
-                                                $result->bind_param("sissd", $docTitle, $numCited, $authors, $abstract, $bobot);
+                                                $result->bind_param("sissds", $docTitle, $numCited, $authors, $abstract, $bobot, $docSourceLink);
                                                 $result->execute();
                                             }
                                         }

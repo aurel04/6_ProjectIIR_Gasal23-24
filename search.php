@@ -317,7 +317,7 @@
                                             $result = $con->query($sql);
                                             while ($row = $result->fetch_assoc()) {
                                                 echo '<div class="card bg-light shadow mb-5 p-4" style="border-radius: 1rem;">';
-                                                echo "<h3 class='mb-3'>" . $row['title'] . "</a></h3>";
+                                                echo "<h3 class='mb-3'><a href='" . $row['link'] . "'>" . $row['title'] . "</a></h3>";
                                                 echo "<h5 class='mb-3'>Authors: " . $row['authors'] . " times</h5>";
                                                 echo "<p>" . $row['abstract'] . "</p>";
                                                 echo "<h6>Number of Citation:" . $row['number_citations'] . "</h6>";
