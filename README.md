@@ -4,7 +4,7 @@ The data crawling process begins with a user-defined search topic. The program w
 essential journal information such as the title, author, abstract, citation count and the journal 
 link from Google Scholar and stores it into a local database.
 
-The images show that the program only  crawled data from journal and accurately reflects the information displayed on Google Scholar.
+The program will only crawl data from result that have abstraction and accurately reflects the information displayed on Google Scholar.
 
 The stored data from the data crawling feature will serve as the data source for the search engine feature. 
 Users can input keywords to find relevant journals, which are ranked based on similarity scores. 
